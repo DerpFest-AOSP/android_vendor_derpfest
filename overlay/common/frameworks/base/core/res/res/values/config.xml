@@ -660,4 +660,7 @@
     <string name="config_headlineFontFamily">google-sans</string>
     <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
     <string name="config_headlineFontFeatureSettings">ss03</string>
+
+    <!-- Whether safe headphone volume is enabled or not (country specific). -->
+    <bool name="config_safe_media_volume_enabled">false</bool>
 </resources>
