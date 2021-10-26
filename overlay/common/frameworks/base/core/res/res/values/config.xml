@@ -179,4 +179,11 @@
     <string name="config_defaultContextualSearchKey">omni.entry_point</string>
     <string name="config_defaultContextualSearchLegacyEnabled">omni.enable_vis</string>
     <string name="config_defaultContextualSearchPackageName" translatable="false">com.google.android.googlequicksearchbox</string>
+
+    <!-- Google Sans -->
+    <string name="config_bodyFontFamily">google-sans-text</string>
+    <string name="config_bodyFontFamilyMedium">google-sans-text-medium</string>
+    <string name="config_headlineFontFamily">google-sans</string>
+    <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
+    <string name="config_headlineFontFeatureSettings">ss03</string>
 </resources>
