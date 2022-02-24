@@ -47,6 +47,7 @@ PRODUCT_PRODUCT_PROPERTIES += persist.sys.strictmode.disable=true
 endif
 
 # Backup Tool
+ifneq ($(TARGET_EXCLUDE_BACKUPTOOL),true)
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/lineage/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
@@ -65,6 +66,7 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/backuptool_ab.sh \
     system/bin/backuptool_ab.functions \
     system/bin/backuptool_postinstall.sh
+endif
 endif
 
 ifneq ($(TARGET_BUILD_VARIANT),user)
