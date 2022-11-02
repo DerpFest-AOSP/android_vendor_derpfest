@@ -94,9 +94,9 @@ ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
 else
     PRODUCT_PACKAGES += \
         SettingsGoogleFutureFaceEnroll \
-        PixelTrafficLightFaceOverlay
+        PixelTrafficLightFaceOverlay \
+        FaceEnrollSettingsOverlay #FaceEnroll - Settings RRO
 endif
-
 
 # Don't dexpreopt prebuilts. (For GMS).
 DONT_DEXPREOPT_PREBUILTS := true
