@@ -172,7 +172,7 @@
     <string name="config_rawContactsLocalAccountType" translatable="false">com.android.contacts</string>
 
     <!-- Name of the font family to use in the default lockscreen clock -->
-    <string name="config_clockFontFamily" translatable="false" />
+    <string name="config_clockFontFamily" translatable="false">@font/google_sans_clock</string>
 
     <!-- Circle to search -->
     <string name="config_defaultContextualSearchPackageName" translatable="false">com.google.android.googlequicksearchbox</string>
