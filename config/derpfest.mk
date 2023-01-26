@@ -73,6 +73,7 @@ PRODUCT_PACKAGES += \
     GameSpace \
     LMOFreeform \
     LMOFreeformSidebar \
+    Miniature \
     OmniStyle \
     Panic \
     Prospect \

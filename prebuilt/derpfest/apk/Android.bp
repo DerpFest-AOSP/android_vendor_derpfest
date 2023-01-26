@@ -1,0 +1,11 @@
+//
+// SPDX-FileCopyrightText: DerpFest AOSP
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app_import {
+    name: "Miniature",
+    apk: "miniature.apk",
+    certificate: "platform",
+    product_specific: true,
+}
