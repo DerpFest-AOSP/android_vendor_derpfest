@@ -55,6 +55,7 @@ PRODUCT_PACKAGES += \
     FossifyGallery \
     GameSpace \
     LMOSystemUIClock \
+    Miniature \
     Panic \
     Prospect \
     Ripple
