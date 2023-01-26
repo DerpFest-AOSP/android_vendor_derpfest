@@ -56,6 +56,7 @@ PRODUCT_PACKAGES += \
     FossifyGallery \
     GameSpace \
     LMOSystemUIClock \
+    Miniature \
     Prospect
 
 # ColumbusService
