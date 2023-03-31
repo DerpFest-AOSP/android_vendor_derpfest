@@ -1,4 +1,4 @@
-# LineageOS core functionality
+# DerpFest core functionality
 on init
     export TERMINFO /system_ext/etc/terminfo
 

@@ -1,5 +1,6 @@
 # Allow vendor/extra to override any property by setting it first
 $(call inherit-product-if-exists, vendor/extra/product.mk)
+$(call inherit-product-if-exists, vendor/lineage/config/derpfest.mk)
 
 # Exclude repos from bp scanning
 PRODUCT_SOURCE_ROOT_DIRS += -kernel/platform
@@ -8,7 +9,7 @@ PRODUCT_SOURCE_ROOT_DIRS += -prebuilts/misc/protobuf_vendorcompat
 # Allow vendor prebuilt repos to exclude themselves from bp scanning
 -include $(sort $(wildcard vendor/*/*/exclude-bp.mk))
 
-PRODUCT_BRAND ?= LineageOS
+PRODUCT_BRAND ?= DerpFest
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -31,6 +32,7 @@ endif
 ifeq ($(TARGET_BUILD_VARIANT),eng)
 # Disable ADB authentication
 PRODUCT_SYSTEM_EXT_PROPERTIES += ro.adb.secure=0
+PRODUCT_SYSTEM_EXT_PROPERTIES += persist.sys.usb.config=adb
 else
 ifdef WITH_ADB_INSECURE
 # Forcebly disable ADB authentication
@@ -38,6 +40,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += ro.adb.secure=0
 else
 # Enable ADB authentication
 PRODUCT_SYSTEM_EXT_PROPERTIES += ro.adb.secure=1
+PRODUCT_SYSTEM_EXT_PROPERTIES += persist.sys.usb.config=none
 
 # Set ro.debuggable=0 for userdebug
 PRODUCT_NOT_DEBUGGABLE_IN_USERDEBUG := true
@@ -114,6 +117,9 @@ endif
 
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
+WITH_DEXPREOPT_DEBUG_INFO := false
 
 # Strip the local variable table and the local variable type table to reduce
 # the size of the system image. This has no bearing on stack traces, but will
@@ -133,13 +139,6 @@ ifneq ($(TARGET_DISABLE_EPPE),true)
 $(call enforce-product-packages-exist-internal,$(lastword $(_include_stack)),product_manifest.xml rild Calendar android.hidl.memory@1.0-impl.vendor vndk_apex_snapshot_package)
 endif
 
-# Bootanimation
-TARGET_SCREEN_WIDTH ?= 1080
-TARGET_SCREEN_HEIGHT ?= 1920
-PRODUCT_PACKAGES += \
-    bootanimation.zip \
-    bootanimation-dark.zip
-
 # Lineage interfaces
 PRODUCT_PACKAGES += \
     framework_compatibility_matrix.lineage.xml
@@ -153,16 +152,15 @@ endif
 
 ifeq ($(PRODUCT_IS_AUTOMOTIVE),)
 PRODUCT_PACKAGES += \
-    LineageParts \
-    LineageSetupWizard
+    DerpFest-Parts
 endif
 
 PRODUCT_PACKAGES += \
-    LineageSettingsProvider \
+    DerpFest-SettingsProvider \
     Updater
 
 PRODUCT_COPY_FILES += \
-    vendor/lineage/prebuilt/common/etc/init/init.lineage-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.lineage-updater.rc
+    vendor/lineage/prebuilt/common/etc/init/init.derpfest-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.derpfest-updater.rc
 
 # Config
 PRODUCT_PACKAGES += \
@@ -261,6 +259,8 @@ endif
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     CarSystemUI \
+    Launcher3QuickStep \
+    Settings \
     SystemUI
 
 PRODUCT_PRODUCT_PROPERTIES += \
