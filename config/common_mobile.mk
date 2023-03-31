@@ -53,7 +53,7 @@ PRODUCT_PACKAGES += \
 
 # Legal
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.lineagelegal.url=https://lineageos.org/legal
+    ro.derpfestlegal.url=https://derpfest.org/privacy
 
 # Media
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -78,6 +78,5 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
 
 # Themes
 PRODUCT_PACKAGES += \
-    LineageBlackTheme \
     ThemePicker \
     ThemesStub
