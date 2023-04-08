@@ -59,3 +59,12 @@ else
     PRODUCT_PACKAGES += \
         SettingsGoogleFutureFaceEnroll
 endif
+
+
+# Don't dexpreopt prebuilts. (For GMS).
+DONT_DEXPREOPT_PREBUILTS := true
+
+# GMS
+WITH_GMS := true
+$(call inherit-product-if-exists, vendor/google/gms/config.mk)
+$(call inherit-product-if-exists, vendor/google/pixel/config.mk)
