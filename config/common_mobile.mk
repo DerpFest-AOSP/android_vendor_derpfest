@@ -61,6 +61,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.lineagelegal.url=https://lineageos.org/legal
 
+# Customizations
+PRODUCT_PACKAGES += \
+    LineageNavigationBarNoHint
+
 # Media
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true
