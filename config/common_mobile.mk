@@ -4,8 +4,6 @@ $(call inherit-product, vendor/lineage/config/common.mk)
 # Apps
 PRODUCT_PACKAGES += \
     AvatarPicker \
-    Backgrounds \
-    Glimpse \
     LatinIME
 
 ifeq ($(PRODUCT_TYPE), go)

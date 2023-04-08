@@ -31,3 +31,10 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 # StorageManager configuration
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.storage_manager.show_opt_in=false
+
+# Don't dexpreopt prebuilts. (For GMS).
+DONT_DEXPREOPT_PREBUILTS := true
+
+# Include GMS by default
+WITH_GMS := true
+$(call inherit-product, vendor/gms/products/gms.mk)
