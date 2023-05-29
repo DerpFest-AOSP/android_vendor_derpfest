@@ -1,0 +1,16 @@
+//
+// Copyright (C) 2025 DerpFest AOSP
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app_import {
+    name: "Accord",
+    apk: "accord.apk",
+    certificate: "platform",
+    product_specific: true,
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+    ],
+}
