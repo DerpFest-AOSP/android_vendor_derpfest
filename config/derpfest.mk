@@ -54,6 +54,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Extra packages
 PRODUCT_PACKAGES += \
+    Accord \
     BatteryStatsViewer \
     DerpWalls \
     GameSpace \
