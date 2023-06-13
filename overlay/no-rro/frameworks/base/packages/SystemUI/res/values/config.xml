@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SystemUI plugin allowlist as a STATIC overlay (this dir is in
+    PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS). SystemUI ships no overlayable.xml, so an RRO
+    cannot override config_pluginAllowlist at runtime; it must be merged into SystemUI.apk
+    at compile time. Includes the Pixel clock plugins (SystemUIClocks-*) so ClockRegistry
+    loads them on this build (ro.debuggable=0 -> no debug bypass of the plugin gate).
+-->
+<resources>
+    <string-array name="config_pluginAllowlist" translatable="false">
+        <item>com.android.systemui</item>
+        <item>com.android.systemui.plugin.globalactions.wallet</item>
+        <item>org.lineageos.settings.device</item>
+        <item>com.android.systemui.clocks</item>
+        <item>com.android.systemui.clocks.debug</item>
+        <item>com.android.systemui.clocks.bignum</item>
+        <item>com.android.systemui.clocks.calligraphy</item>
+        <item>com.android.systemui.clocks.flex</item>
+        <item>com.android.systemui.clocks.growth</item>
+        <item>com.android.systemui.clocks.handwritten</item>
+        <item>com.android.systemui.clocks.inflate</item>
+        <item>com.android.systemui.clocks.metro</item>
+        <item>com.android.systemui.clocks.numoverlap</item>
+        <item>com.android.systemui.clocks.weather</item>
+        <item>com.libremobileos.clock</item>
+        <item>org.derpfest.clocks.words</item>
+    </string-array>
+</resources>
