@@ -45,6 +45,7 @@ PRODUCT_PACKAGES += \
     DerpWalls \
     GameSpace \
     LMOSystemUIClock \
+    Panic \
     Prospect \
     Ripple
 
