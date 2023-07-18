@@ -1,3 +1,9 @@
+# Audio
+$(call inherit-product, vendor/lineage/config/audio.mk)
+
+# Fonts
+include vendor/fontage/config.mk
+
 # Additional props
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     drm.service.enabled=true \
@@ -11,12 +17,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Blur
 ifeq ($(TARGET_NOT_USES_BLUR), false)
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.sf.blurs_are_expensive=1 \
-    ro.surface_flinger.supports_background_blur=1
+    PRODUCT_SYSTEM_EXT_PROPERTIES += \
+        ro.sf.blurs_are_expensive=1 \
+        ro.surface_flinger.supports_background_blur=1
 else
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.launcher.blur.appLaunch=0
+    PRODUCT_PRODUCT_PROPERTIES += \
+        ro.launcher.blur.appLaunch=0
 endif
 
 # Disable async MTE on system_server
@@ -26,3 +32,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 # Enable dex2oat64 to do dexopt
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     dalvik.vm.dex2oat64.enabled=true
+
+# StorageManager configuration
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.storage_manager.show_opt_in=false
