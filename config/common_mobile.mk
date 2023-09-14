@@ -25,7 +25,8 @@ PRODUCT_PACKAGES += \
 
 # Charger
 PRODUCT_PACKAGES += \
-    product_charger_res_images
+    product_charger_res_images \
+    product_charger_res_images_vendor
 
 # New charging information
 PRODUCT_PRODUCT_PROPERTIES += \
