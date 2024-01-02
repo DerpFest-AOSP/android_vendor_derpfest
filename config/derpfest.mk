@@ -30,6 +30,10 @@ endif
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.launcher.depth.widget=true
 
+# Cloned app exemption
+PRODUCT_COPY_FILES += \
+    vendor/lineage/prebuilt/common/etc/sysconfig/preinstalled-packages-derpfest.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-derpfest.xml
+
 # Disable async MTE on system_server
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     arm64.memtag.process.system_server=off
