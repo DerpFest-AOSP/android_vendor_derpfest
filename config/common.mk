@@ -214,6 +214,10 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/procmem
 endif
 
+ifneq ($(filter %_lemonades %_kebab,$(TARGET_PRODUCT)),)
+PRODUCT_PACKAGES += DerpFestRemovePackages
+endif
+
 # Root
 PRODUCT_PACKAGES += \
     adb_root
