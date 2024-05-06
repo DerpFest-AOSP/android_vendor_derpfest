@@ -16,6 +16,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     media.mediadrmservice.enable=true \
     persist.sys.disable_rescue=true
 
+# Don't compile SystemUITests
+EXCLUDE_SYSTEMUI_TESTS := true
+
 # Disable touch video heatmap to reduce latency, motion jitter, and CPU usage
 # on supported devices with Deep Press input classifier HALs and models
 PRODUCT_PRODUCT_PROPERTIES += \
