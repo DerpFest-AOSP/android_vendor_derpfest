@@ -55,9 +55,15 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.storage_manager.show_opt_in=false
 
+# Accord
+TARGET_INCLUDE_ACCORD ?= true
+ifeq ($(TARGET_INCLUDE_ACCORD),true)
+PRODUCT_PACKAGES += \
+    Accord
+endif
+
 # Extra packages
 PRODUCT_PACKAGES += \
-    Accord \
     BatteryStatsViewer \
     DerpWalls \
     FossifyGallery \
