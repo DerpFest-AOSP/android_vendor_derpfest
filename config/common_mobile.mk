@@ -41,6 +41,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.derpfestlegal.url=https://derpfest.org/privacy
 
+# Display
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    debug.sf.frame_rate_multiple_threshold=60
+
 # Media
 PRODUCT_PRODUCT_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true
