@@ -214,7 +214,7 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/procmem
 endif
 
-ifneq ($(filter %_lemonades %_kebab %_nairo,$(TARGET_PRODUCT)),)
+ifneq ($(filter %_lemonades %_kebab %_nairo %_alioth,$(TARGET_PRODUCT)),)
 PRODUCT_PACKAGES += DerpFestRemovePackages
 endif
 
