@@ -234,10 +234,10 @@ ifneq ($(filter %_cheeseburger %_dumpling %_nairo %_alioth,$(TARGET_PRODUCT)),)
 PRODUCT_PACKAGES += DerpFestRemovePackages
 endif
 
+ifneq ($(TARGET_BUILD_VARIANT),user)
 # Root
 PRODUCT_PACKAGES += \
     adb_root
-ifneq ($(TARGET_BUILD_VARIANT),user)
 ifeq ($(WITH_SU),true)
 PRODUCT_PACKAGES += \
     su
