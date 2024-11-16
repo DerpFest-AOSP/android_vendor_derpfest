@@ -668,3 +668,6 @@ function derpfest()
 }
 
 alias df=derpfest
+
+# Bypass API modified validations
+export DISABLE_STUB_VALIDATION=true
