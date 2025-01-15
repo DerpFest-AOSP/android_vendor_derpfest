@@ -66,4 +66,7 @@
         <item>bottom_start:flashlight</item>
         <item>bottom_end:camera</item>
     </string-array>
+
+    <!-- Biometric Dialog values -->
+    <integer name="biometric_dialog_text_gravity">1</integer> <!-- CENTER_HORIZONTAL -->
 </resources>
