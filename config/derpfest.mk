@@ -93,7 +93,8 @@ ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
         frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/android.hardware.biometrics.face.xml
 else
     PRODUCT_PACKAGES += \
-        SettingsGoogleFutureFaceEnroll
+        SettingsGoogleFutureFaceEnroll \
+        PixelTrafficLightFaceOverlay
 endif
 
 
