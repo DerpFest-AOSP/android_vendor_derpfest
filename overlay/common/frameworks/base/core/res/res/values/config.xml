@@ -180,4 +180,7 @@
 
     <!-- Whether glanceable hub is enabled by default. -->
     <bool name="config_glanceableHubEnabledByDefault">true</bool>
+
+    <!-- Circle to search -->
+    <string name="config_defaultContextualSearchPackageName" translatable="false">com.google.android.googlequicksearchbox</string>
 </resources>
