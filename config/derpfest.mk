@@ -1,6 +1,9 @@
 # Fonts
 include vendor/fontage/config.mk
 
+# Certification
+$(call inherit-product, vendor/certification/config.mk)
+
 # DRM Service
 PRODUCT_PRODUCT_PROPERTIES += \
     drm.service.enabled=true \
