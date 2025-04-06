@@ -4,6 +4,9 @@ $(call inherit-product, vendor/lineage/config/audio.mk)
 # Fonts
 include vendor/fontage/config.mk
 
+# Certification
+$(call inherit-product, vendor/certification/config.mk)
+
 # Additional props
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     drm.service.enabled=true \
