@@ -1,6 +1,9 @@
 # Fonts
 include vendor/fontage/config.mk
 
+# Overlays
+include vendor/overlay/overlays.mk
+
 # DRM Service
 PRODUCT_PRODUCT_PROPERTIES += \
     drm.service.enabled=true \
