@@ -2,3 +2,5 @@ proprietary/*
 prebuilt/archive
 prebuilt/generated/*
 !prebuilt/generated/Android.bp
+signing/keys/*
+!signing/keys/BUILD
