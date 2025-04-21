@@ -37,6 +37,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Extra packages
 PRODUCT_PACKAGES += \
+    BatteryStatsViewer \
     DerpWalls \
     LMOSystemUIClock
 
