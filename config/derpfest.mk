@@ -97,3 +97,14 @@ $(call inherit-product-if-exists, vendor/gapps/arm/arm-vendor.mk)
 endif # TARGET_SUPPORTS_64_BIT_APPS
 endif # PRODUCT_IS_ATV
 endif # WITH_GMS
+
+# Signing
+ifneq (eng,$(TARGET_BUILD_VARIANT))
+ifneq (,$(wildcard vendor/lineage/signing/keys/releasekey.pk8))
+PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lineage/signing/keys/releasekey
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.oem_unlock_supported=1
+endif
+ifneq (,$(wildcard vendor/lineage/signing/keys/otakey.x509.pem))
+PRODUCT_OTA_PUBLIC_KEYS := vendor/lineage/signing/keys/otakey.x509.pem
+endif
+endif
