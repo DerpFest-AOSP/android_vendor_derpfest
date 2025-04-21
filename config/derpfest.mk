@@ -1,6 +1,9 @@
 # Fonts
 include vendor/fontage/config.mk
 
+# Overlays
+include vendor/overlay/overlays.mk
+
 # Certification
 $(call inherit-product, vendor/certification/config.mk)
 
