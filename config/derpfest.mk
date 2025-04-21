@@ -61,6 +61,8 @@ PRODUCT_PACKAGES += \
     DerpWalls \
     FossifyGallery \
     GameSpace \
+    LMOFreeform \
+    LMOFreeformSidebar \
     LMOSystemUIClock \
     Miniature \
     Panic \
