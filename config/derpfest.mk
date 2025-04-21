@@ -52,7 +52,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Extra packages
 PRODUCT_PACKAGES += \
     BatteryStatsViewer \
-    GameSpace
+    GameSpace \
+    LMOFreeform \
+    LMOFreeformSidebar
 
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= $(TARGET_SUPPORTS_64_BIT_APPS)
