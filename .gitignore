@@ -1,3 +1,5 @@
 proprietary/*
 prebuilt/archive
 prebuilt/generated/*
+signing/keys/*
+!signing/keys/BUILD
