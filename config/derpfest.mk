@@ -49,6 +49,10 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.storage_manager.show_opt_in=false
 
+# Extra packages
+PRODUCT_PACKAGES += \
+    BatteryStatsViewer
+
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= $(TARGET_SUPPORTS_64_BIT_APPS)
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
