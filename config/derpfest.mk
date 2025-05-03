@@ -44,7 +44,8 @@ PRODUCT_PACKAGES += \
     BatteryStatsViewer \
     DerpWalls \
     GameSpace \
-    LMOSystemUIClock
+    LMOSystemUIClock \
+    Prospect
 
 # ColumbusService
 ifneq ($(TARGET_SUPPORTS_QUICK_TAP),false)
