@@ -47,6 +47,7 @@ PRODUCT_PACKAGES += \
     Accord \
     BatteryStatsViewer \
     DerpWalls \
+    FossifyGallery \
     GameSpace \
     LMOSystemUIClock \
     Prospect

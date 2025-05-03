@@ -1,0 +1,14 @@
+//
+// Copyright (C) 2025 DerpFest AOSP
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app_import {
+    name: "FossifyGallery",
+    apk: "fossifygallery.apk",
+    overrides: ["Gallery, Gallery2, Glimpse, SnapdragonGallery"],
+    preprocessed: true,
+    presigned: true,
+    product_specific: true,
+}
