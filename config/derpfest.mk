@@ -64,10 +64,6 @@ PRODUCT_PACKAGES += \
     Prospect \
     Ripple
 
-# UDFPS Animation effects
-PRODUCT_PACKAGES += \
-    UdfpsAnimations
-
 # ColumbusService
 ifneq ($(TARGET_SUPPORTS_QUICK_TAP),false)
 PRODUCT_PACKAGES += \
