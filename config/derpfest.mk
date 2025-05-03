@@ -44,6 +44,7 @@ PRODUCT_PACKAGES += \
     DerpWalls \
     GameSpace \
     LMOSystemUIClock \
+    Prospect \
     Ripple
 
 # ColumbusService
