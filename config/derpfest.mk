@@ -59,6 +59,7 @@ PRODUCT_PACKAGES += \
     GameSpace \
     LMOFreeform \
     LMOFreeformSidebar \
+    Prospect \
     Ripple
 
 # UDFPS Animation effects
