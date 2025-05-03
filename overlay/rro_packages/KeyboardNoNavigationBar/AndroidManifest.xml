@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: DerpFest AOSP
+     SPDX-License-Identifier: Apache-2.0
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.derpfest.overlay.customization.keyboard.nonavbar"
+        android:versionCode="1"
+        android:versionName="1.0">
+    <overlay
+        android:targetPackage="android"
+        android:isStatic="false"
+        android:priority="1" />
+</manifest>
