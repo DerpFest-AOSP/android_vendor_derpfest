@@ -43,7 +43,8 @@ PRODUCT_PACKAGES += \
     BatteryStatsViewer \
     DerpWalls \
     GameSpace \
-    LMOSystemUIClock
+    LMOSystemUIClock \
+    Ripple
 
 # ColumbusService
 ifneq ($(TARGET_SUPPORTS_QUICK_TAP),false)
