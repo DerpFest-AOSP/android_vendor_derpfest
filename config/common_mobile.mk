@@ -63,7 +63,8 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 # Customizations
 PRODUCT_PACKAGES += \
-    LineageNavigationBarNoHint
+    LineageNavigationBarNoHint \
+    KeyboardNoNavigationBar
 
 # Display
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
