@@ -60,6 +60,7 @@ PRODUCT_PACKAGES += \
     Accord \
     BatteryStatsViewer \
     DerpWalls \
+    FossifyGallery \
     GameSpace \
     LMOFreeform \
     LMOFreeformSidebar \
