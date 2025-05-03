@@ -58,7 +58,8 @@ PRODUCT_PACKAGES += \
     DerpWalls \
     GameSpace \
     LMOFreeform \
-    LMOFreeformSidebar
+    LMOFreeformSidebar \
+    Ripple
 
 # UDFPS Animation effects
 PRODUCT_PACKAGES += \
