@@ -73,6 +73,7 @@ PRODUCT_PACKAGES += \
     GameSpace \
     LMOFreeform \
     LMOFreeformSidebar \
+    OmniStyle \
     Panic \
     Prospect \
     Ripple
