@@ -656,3 +656,15 @@ function generate_host_overrides() {
 }
 
 generate_host_overrides
+
+function derpfest()
+{
+    local T=$(gettop)
+    if [ ! "$T" ]; then
+        echo "Couldn't locate the top of the tree. Try setting TOP." >&2
+        return
+    fi
+    $T/vendor/lineage/tools/build-derpfest.sh "$@"
+}
+
+alias df=derpfest
