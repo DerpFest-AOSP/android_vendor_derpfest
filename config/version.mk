@@ -10,6 +10,7 @@ ifeq ($(DERPFEST_BUILD_TYPE),)
 endif
 
 # Build variant
+DERPFEST_BETA ?= true
 ifeq ($(DERPFEST_BETA),false)
     DERPFEST_BUILD_VARIANT = Beta
 else
