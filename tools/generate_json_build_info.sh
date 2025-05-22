@@ -18,7 +18,7 @@ file_path="$1"
 if [[ -f "$file_path" ]]; then
     echo "Generating .json"
     file_name=$(basename "$file_path")
-    device_name=$(echo "$file_name" | cut -d'-' -f5)
+    device_name=$(echo "$file_name" | cut -d'-' -f4)
     
     # Set output directory with fallback
     out_dir="${OUT_DIR:-out}"
