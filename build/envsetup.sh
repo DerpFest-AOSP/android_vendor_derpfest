@@ -664,6 +664,7 @@ function derpfest()
         echo "Couldn't locate the top of the tree. Try setting TOP." >&2
         return
     fi
+    source ${ANDROID_BUILD_TOP}/vendor/lineage/vars/aosp_target_release
     $T/vendor/lineage/tools/build-derpfest.sh "$@"
 }
 
