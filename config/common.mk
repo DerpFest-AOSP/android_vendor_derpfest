@@ -46,6 +46,10 @@ endif
 PRODUCT_PRODUCT_PROPERTIES += persist.sys.strictmode.disable=true
 endif
 
+# Enable Material Design 3 Expressive
+PRODUCT_PRODUCT_PROPERTIES += \
+    is_expressive_design_enabled=true
+
 # Backup Tool
 ifneq ($(TARGET_EXCLUDE_BACKUPTOOL),true)
 PRODUCT_COPY_FILES += \
