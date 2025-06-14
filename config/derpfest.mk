@@ -7,9 +7,6 @@ include vendor/fontage/config.mk
 # Overlays
 include vendor/overlay/overlays.mk
 
-# Certification
-$(call inherit-product, vendor/certification/config.mk)
-
 # Additional props
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     drm.service.enabled=true \
