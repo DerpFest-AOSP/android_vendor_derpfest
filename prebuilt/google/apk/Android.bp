@@ -1,0 +1,17 @@
+//
+// Copyright (C) 2025 DerpFest AOSP
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app_import {
+	name: "SoundPickerPrebuilt_32000122",
+	owner: "google",
+	apk: "SoundPickerPrebuilt_32000122.apk",
+	preprocessed: true,
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	product_specific: true,
+}
