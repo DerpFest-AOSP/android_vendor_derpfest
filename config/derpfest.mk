@@ -75,7 +75,7 @@ PRODUCT_PACKAGES += \
     Panic \
     Prospect \
     Ripple \
-    SoundPickerPrebuilt_32000122
+    SoundPickerPrebuilt_32000142
 
 # ColumbusService
 ifneq ($(TARGET_SUPPORTS_QUICK_TAP),false)
