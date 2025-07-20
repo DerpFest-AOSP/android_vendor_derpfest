@@ -71,7 +71,6 @@ PRODUCT_PACKAGES += \
     LMOFreeform \
     LMOFreeformSidebar \
     Miniature \
-    OmniStyle \
     Panic \
     Prospect \
     Ripple \
