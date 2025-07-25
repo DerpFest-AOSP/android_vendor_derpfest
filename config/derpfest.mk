@@ -41,6 +41,9 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.storage_manager.show_opt_in=false
 
+# Fake Encryption 
+PRODUCT_PRODUCT_PROPERTIES += ro.crypto.state=encrypted
+
 # Accord
 TARGET_INCLUDE_ACCORD ?= true
 ifeq ($(TARGET_INCLUDE_ACCORD),true)
