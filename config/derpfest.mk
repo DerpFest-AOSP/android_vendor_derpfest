@@ -99,21 +99,7 @@ endif
 
 # GMS
 WITH_GMS := true
-ifeq ($(WITH_GMS), true)
-ifeq ($(PRODUCT_IS_ATV),true)
-ifeq ($(TARGET_SUPPORTS_64_BIT_APPS),true)
-$(call inherit-product-if-exists, vendor/gapps_tv/arm64/arm64-vendor.mk)
-else
-$(call inherit-product-if-exists, vendor/gapps_tv/arm/arm-vendor.mk)
-endif # TARGET_SUPPORTS_64_BIT_APPS
-else
-ifeq ($(TARGET_SUPPORTS_64_BIT_APPS),true)
-$(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
-else
-$(call inherit-product-if-exists, vendor/gapps/arm/arm-vendor.mk)
-endif # TARGET_SUPPORTS_64_BIT_APPS
-endif # PRODUCT_IS_ATV
-endif # WITH_GMS
+$(call inherit-product-if-exists, vendor/google/gms/config.mk)
 
 # Signing
 ifneq (eng,$(TARGET_BUILD_VARIANT))
