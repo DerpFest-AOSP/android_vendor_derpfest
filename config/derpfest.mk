@@ -7,9 +7,6 @@ include vendor/fontage/config.mk
 # Overlays
 include vendor/overlay/overlays.mk
 
-# Pixel
-$(call inherit-product, vendor/pixel/clocks/products/clocks.mk)
-
 # Additional props
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     drm.service.enabled=true \
