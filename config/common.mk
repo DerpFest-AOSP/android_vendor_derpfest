@@ -217,6 +217,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlay
 PRODUCT_PACKAGES += \
+    FrameworkOverlayCustom \
     SettingsOverlayCustom
 
 # OverlayFS
