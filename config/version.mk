@@ -4,8 +4,9 @@ DERPFEST_VERSION := 16.0
 DERPFEST_BUILD_DATE := $(shell date -u +%Y%m%d)
 
 # Allow DERPFEST_BUILD_TYPE to be set from the environment, default to Community
-DERPFEST_BUILD_TYPE ?= $(strip $(DERPFEST_BUILD_TYPE))
-ifeq ($(DERPFEST_BUILD_TYPE),)
+ifdef DERPFEST_BUILD_TYPE
+  DERPFEST_BUILD_TYPE := $(strip $(DERPFEST_BUILD_TYPE))
+else
   DERPFEST_BUILD_TYPE := Community
 endif
 
