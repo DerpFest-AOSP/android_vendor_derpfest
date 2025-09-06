@@ -83,3 +83,8 @@ endif
 ifneq ($(TARGET_INIT_VENDOR_LIB),)
     $(error TARGET_INIT_VENDOR_LIB is deprecated, please migrate to soong_config_set,libinit,vendor_init_lib)
 endif
+
+# Treble sepolicy tests
+# Set default value if not already set
+DISABLE_TREBLE_SEPOLICY_TESTS ?= "false"
+$(call soong_config_set,lineage,disable_treble_sepolicy_tests,$(DISABLE_TREBLE_SEPOLICY_TESTS))
