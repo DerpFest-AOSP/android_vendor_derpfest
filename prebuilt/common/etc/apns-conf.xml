@@ -462,7 +462,7 @@
   <apn carrier="Vodafone Internet" mcc="226" mnc="01" apn="internet.vodafone.ro" proxy="" port="" user="internet.vodafone.ro" password="vodafone" mmsc="" type="default,supl" />
   <apn carrier="Vodafone RO" mcc="226" mnc="01" apn="internet.vodafone.ro" proxy="" port="" user="internet.vodafone.ro" password="vodafone" mmsc="" type="default,supl" />
   <apn carrier="Vodafone RO live! PRE" mcc="226" mnc="01" apn="live.pre.vodafone.com" proxy="193.230.161.231" port="8080" user="live" password="vodafone" mmsc="" type="default,supl" />
-  <apn carrier="Vodafone RO live!" mcc="226" mnc="01" apn="live.vodafone.com" proxy="193.230.161.231" port="8080" user="live" password="vodafone" mmsc="" type="default,supl" />
+  <apn carrier="Vodafone RO live!" mcc="226" mnc="01" apn="live.vodafone.com" proxy="" port="" user="live" password="" mmsc="" type="default" />
   <apn carrier="Vodafone RO MMS PRE" mcc="226" mnc="01" apn="mms.pre.vodafone.ro" proxy="" port="" user="mms" password="vodafone" mmsc="http://multimedia/servlets/mms" mmsproxy="193.230.161.231" mmsport="8080" type="mms" />
   <apn carrier="Vodafone RO MMS" mcc="226" mnc="01" apn="mms.vodafone.ro" proxy="" port="" user="mms" password="vodafone" mmsc="http://multimedia/servlets/mms" mmsproxy="193.230.161.231" mmsport="8080" type="mms" />
   <apn carrier="Telekom Romania Broadband" mcc="226" mnc="03" apn="broadband" type="default,supl" />
