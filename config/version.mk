@@ -1,7 +1,13 @@
 # Increase DerpFest Version with each major release.
 DERPFEST_VERSION := 16.0
 
-DERPFEST_BUILD_DATE := $(shell date -u +%Y%m%d)
+# Build date
+DERPFEST_VERSION_APPEND_TIME_OF_DAY ?= false
+ifeq ($(DERPFEST_VERSION_APPEND_TIME_OF_DAY),true)
+  DERPFEST_BUILD_DATE := $(shell date +%Y%m%d-%H%M)
+else
+  DERPFEST_BUILD_DATE := $(shell date +%Y%m%d)
+endif
 
 # Allow DERPFEST_BUILD_TYPE to be set from the environment, default to Community
 ifdef DERPFEST_BUILD_TYPE
@@ -19,7 +25,7 @@ else
 endif
 
 # Internal version
-LINEAGE_VERSION := DerpFest-v$(DERPFEST_VERSION)-$(shell date +%Y%m%d)-$(LINEAGE_BUILD)-$(DERPFEST_BUILD_TYPE)-$(DERPFEST_BUILD_VARIANT)
+LINEAGE_VERSION := DerpFest-v$(DERPFEST_VERSION)-$(DERPFEST_BUILD_DATE)-$(LINEAGE_BUILD)-$(DERPFEST_BUILD_TYPE)-$(DERPFEST_BUILD_VARIANT)
 
 # Display version
 LINEAGE_DISPLAY_VERSION := DerpFest-v$(DERPFEST_VERSION)-$(LINEAGE_BUILD)
