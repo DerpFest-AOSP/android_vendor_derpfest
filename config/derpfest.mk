@@ -1,3 +1,6 @@
+# Fonts
+include vendor/fontage/config.mk
+
 # DRM Service
 PRODUCT_PRODUCT_PROPERTIES += \
     drm.service.enabled=true \
@@ -24,3 +27,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 # Enable dex2oat64 to do dexopt
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     dalvik.vm.dex2oat64.enabled=true
+
+# StorageManager configuration
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.storage_manager.show_opt_in=false
