@@ -72,6 +72,7 @@ endif
 # Extra packages
 PRODUCT_PACKAGES += \
     BatteryStatsViewer \
+    CertifiedKeyboxOverlay \
     DerpWalls \
     FossifyGallery \
     GameSpace \
