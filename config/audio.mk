@@ -3,6 +3,7 @@ PRODUCT_COPY_FILES += \
     vendor/lineage/audio/alarms/Bright_morning.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Bright_morning.ogg \
     vendor/lineage/audio/alarms/Cuckoo_clock.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Cuckoo_clock.ogg \
     vendor/lineage/audio/alarms/Early_twilight.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Early_twilight.ogg \
+    vendor/lineage/audio/alarms/Fresh_morning.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Fresh_morning.ogg \
     vendor/lineage/audio/alarms/Fresh_start.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Fresh_start.ogg \
     vendor/lineage/audio/alarms/Full_of_wonder.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Full_of_wonder.ogg \
     vendor/lineage/audio/alarms/Gentle_breeze.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Gentle_breeze.ogg \
@@ -18,6 +19,7 @@ PRODUCT_COPY_FILES += \
     vendor/lineage/audio/notifications/End_note.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/End_note.ogg \
     vendor/lineage/audio/notifications/Eureka.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Eureka.ogg \
     vendor/lineage/audio/notifications/Gentle_gong.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Gentle_gong.ogg \
+    vendor/lineage/audio/notifications/Kernel.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Kernel.ogg \
     vendor/lineage/audio/notifications/Mallet.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Mallet.ogg \
     vendor/lineage/audio/notifications/Orders_up.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Orders_up.ogg \
     vendor/lineage/audio/notifications/Ping.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Ping.ogg \
@@ -39,6 +41,7 @@ PRODUCT_COPY_FILES += \
     vendor/lineage/audio/ringtones/Monkey_around.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Monkey_around.ogg \
     vendor/lineage/audio/ringtones/Schools_out.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Schools_out.ogg \
     vendor/lineage/audio/ringtones/The_big_adventure.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/The_big_adventure.ogg \
+    vendor/lineage/audio/ringtones/The_next_adventure.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/The_next_adventure.ogg \
     vendor/lineage/audio/ringtones/Your_new_adventure.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Your_new_adventure.ogg \
     vendor/lineage/audio/ringtones/Zen_too.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Zen_too.ogg \
     vendor/lineage/audio/ui/AttentionalHaptics.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/AttentionalHaptics.ogg \
@@ -73,6 +76,6 @@ PRODUCT_COPY_FILES += \
 
 # Change default sounds
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.ringtone=Your_new_adventure.ogg \
-    ro.config.notification_sound=Eureka.ogg \
-    ro.config.alarm_alert=Fresh_start.ogg
+    ro.config.ringtone=The_next_adventure.ogg \
+    ro.config.notification_sound=Kernel.ogg \
+    ro.config.alarm_alert=Fresh_morning.ogg
