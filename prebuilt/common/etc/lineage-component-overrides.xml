@@ -39,4 +39,8 @@
         <component class="com.google.android.settings.intelligence.modules.battery.impl.chargingoptimization.ChargingOptimizationActivityInject" enabled="false" />
         <component class="com.google.android.settings.intelligence.modules.battery.impl.health.BHSettingsActivity" enabled="false" />
     </component-override>
+
+    <component-override package="com.google.android.googlequicksearchbox">
+        <component class=".OneSearchAimActivity" enabled="true" />
+    </component-override>
 </config>
