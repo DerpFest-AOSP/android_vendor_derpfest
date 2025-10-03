@@ -51,6 +51,10 @@ PRODUCT_PACKAGES += \
     Accord
 endif
 
+ifneq ($(filter %_pro1 %_pro1x %_l01k %_joan %_judyp %_judypn %_caymanslm %_racer %_berlin %_pstar %_berlna %_dubai %_tundra %_eqs %_rtwo %_nio %_xpeng %_nx606j %_d1 %_d1x %_d2s %_d2x %_beyond1lte %_beyondx %_beyond2lte %_beyond0lte %_r8q %_cupid %_zeus %_tokay %_caiman %_komodo %_mayfly %_thor %_nuwa %_umi %_cmi %_thyme %_tucana %_zahedan,$(TARGET_PRODUCT)),)
+PRODUCT_PACKAGES += LMODroidEdgeCutout
+endif
+
 # Extra packages
 PRODUCT_PACKAGES += \
     BatteryStatsViewer \
