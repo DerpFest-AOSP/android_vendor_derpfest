@@ -652,13 +652,32 @@ function fixup_common_out_dir() {
 }
 
 function build_kernel() {
-    local lineage_version="lineage-$(_get_build_var_cached PRODUCT_VERSION_MAJOR).$(_get_build_var_cached PRODUCT_VERSION_MINOR)"
+    local product_version_major="$(_get_build_var_cached PRODUCT_VERSION_MAJOR)"
+    local product_version_minor="$(_get_build_var_cached PRODUCT_VERSION_MINOR)"
+    local derpfest_version="$(_get_build_var_cached DERPFEST_VERSION 2>/dev/null)"
+
+    local default_branch="${product_version_major}"
+    if [ -n "${derpfest_version}" ]; then
+        default_branch="${derpfest_version%%.*}"
+    elif [ -n "${product_version_minor}" ] && [ "${product_version_minor}" != "0" ]; then
+        default_branch="${product_version_major}.${product_version_minor}"
+    fi
+
+    local kernel_manifest_branch="${KERNEL_MANIFEST_BRANCH:-${default_branch}}"
+    local kernel_manifest_remote="${KERNEL_MANIFEST_REMOTE:-https://github.com/DerpFest-AOSP}"
+    local kernel_manifest_url="${KERNEL_MANIFEST_URL:-}"
+    local kernel_mirror="${DERPFEST_MIRROR:-${LINEAGE_MIRROR}}"
 
     local target_kernel_device="$(_get_build_var_cached TARGET_KERNEL_DEVICE)"
     local target_kernel_dir="${ANDROID_BUILD_TOP}/$(_get_build_var_cached TARGET_KERNEL_DIR)"
     local target_kernel_source="$(_get_build_var_cached TARGET_KERNEL_PLATFORM_SOURCE)"
+    local target_kernel_manifest=$(echo android_kernel_${target_kernel_source}_manifest | tr / _)
 
     local KERNEL_BUILD_TOP="${ANDROID_BUILD_TOP}/out-kernel/${target_kernel_source}"
+
+    if [ -z "${kernel_manifest_url}" ]; then
+        kernel_manifest_url="${kernel_manifest_remote%/}/${target_kernel_manifest}.git"
+    fi
 
     # Make sure we have the kernel source folder structure in place
     if [ ! -d "${KERNEL_BUILD_TOP}/.repo" ]; then
@@ -692,16 +711,15 @@ function build_kernel() {
     pushd "${KERNEL_BUILD_TOP}" > /dev/null
     if [[ "${SKIP_KERNEL_SYNC}" != "true" && "${SKIP_KERNEL_SYNC}" != "1" ]]; then
         echo "Syncing ${KERNEL_BUILD_TOP}"
-        local target_kernel_manifest=$(echo android_kernel_${target_kernel_source}_manifest | tr / _)
-        local repo_init_args=("-b" "${lineage_version}")
-        if [ -n "${LINEAGE_MIRROR}" ]; then
-            repo_init_args+=("--reference" "${LINEAGE_MIRROR}")
+        local repo_init_args=("-b" "${kernel_manifest_branch}")
+        if [ -n "${kernel_mirror}" ]; then
+            repo_init_args+=("--reference" "${kernel_mirror}")
         fi
         if [ -n "${REPO_VERSION}" ]; then
             repo_init_args+=("--repo-rev" "${REPO_VERSION}")
         fi
 
-        yes | repo init -u https://github.com/LineageOS/${target_kernel_manifest}.git ${repo_init_args[@]} || [ $? -eq 141 ]
+        yes | repo init -u "${kernel_manifest_url}" "${repo_init_args[@]}" || [ $? -eq 141 ]
         if [ $? -ne 0 ]; then
             echo "Kernel source repo init failed"
             popd > /dev/null
@@ -729,8 +747,12 @@ function build_kernel() {
 
     # Copy the new kernel prebuilts
     mkdir -p "${target_kernel_dir}"
+    if ! compgen -G "${KERNEL_BUILD_TOP}/out/${target_kernel_device}/dist/"'*' > /dev/null; then
+        echo "No kernel build artifacts found in ${KERNEL_BUILD_TOP}/out/${target_kernel_device}/dist"
+        return 1
+    fi
     cp -a "${KERNEL_BUILD_TOP}/out/${target_kernel_device}/dist/"* "${target_kernel_dir}/"
-    chmod -x "${target_kernel_dir}/"*
+    find "${target_kernel_dir}" -maxdepth 1 -type f -exec chmod -x {} +
     echo "Kernel build output copied to ${target_kernel_dir}/"
 }
 
