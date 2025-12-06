@@ -652,6 +652,10 @@ function fixup_common_out_dir() {
 }
 
 function build_kernel() {
+    if [[ "${SKIP_KERNEL_BUILD}" == "true" || "${SKIP_KERNEL_BUILD}" == "1" ]]; then
+        echo "Skipping kernel build"
+        return
+    fi
     local product_version_major="$(_get_build_var_cached PRODUCT_VERSION_MAJOR)"
     local product_version_minor="$(_get_build_var_cached PRODUCT_VERSION_MINOR)"
     local derpfest_version="$(_get_build_var_cached DERPFEST_VERSION 2>/dev/null)"
