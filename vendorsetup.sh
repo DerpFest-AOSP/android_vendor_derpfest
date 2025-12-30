@@ -1,14 +1,28 @@
 #!/bin/bash
 
-# Color variables
-YELLOW='\033[1;33m'
-RESET='\033[0m'
+# Color reset
+txtrst=$(tput sgr0)
+
+# Gradient colors (DerpFest purple/pink theme)
+gradient_derpfest() {
+    local text="$1"
+    local len=${#text}
+    local result=""
+    for ((i=0; i<len; i++)); do
+        # Purple (RGB: 147, 112, 219) to Pink (RGB: 255, 105, 180)
+        local r=$((147 + (i * (255-147) / len)))
+        local g=$((112 + (i * (105-112) / len)))
+        local b=$((219 + (i * (180-219) / len)))
+        result+="\033[38;2;${r};${g};${b}m${text:$i:1}"
+    done
+    echo -e "${result}${txtrst}"
+}
 
 # Check if the welcome message has already been shown
 if [ -z "${WELCOME_SHOWN}" ]; then
 
     # Welcome message
-    echo -e "Welcome to ${YELLOW}DerpFest!${RESET}"
+    echo -e "$(gradient_derpfest "Welcome to DerpFest!")"
 
     echo -e "\nHere are some things before you get started!\n"
 
@@ -30,6 +44,6 @@ if [ -z "${WELCOME_SHOWN}" ]; then
     export WELCOME_SHOWN=true
 
 else
-    echo -e "Welcome to ${YELLOW}DerpFest!${RESET}"
+    echo -e "$(gradient_derpfest "Welcome to DerpFest!")"
     echo -e "Environment ready."
 fi
