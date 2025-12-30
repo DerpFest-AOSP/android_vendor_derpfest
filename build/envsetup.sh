@@ -45,6 +45,12 @@ function breakfast()
     target=$1
     local variant=$2
     source ${ANDROID_BUILD_TOP}/vendor/lineage/vars/aosp_target_release
+    for f in `/bin/ls vendor/lineage/vendorsetup.sh 2> /dev/null`
+        do
+            echo "including $f"
+            . $f
+        done
+    unset f
 
     if [ $# -eq 0 ]; then
         # No arguments, so let's have the full menu
