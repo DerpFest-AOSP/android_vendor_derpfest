@@ -49,6 +49,7 @@ $(call inherit-product, vendor/gms/products/gms.mk)
 ifneq (eng,$(TARGET_BUILD_VARIANT))
 ifneq (,$(wildcard vendor/lineage/signing/keys/releasekey.pk8))
 PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lineage/signing/keys/releasekey
+PRODUCT_MAINLINE_BLUETOOTH_SEPOLICY_DEV_CERTIFICATES := $(dir $(PRODUCT_DEFAULT_DEV_CERTIFICATE))
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.oem_unlock_supported=1
 endif
 ifneq (,$(wildcard vendor/lineage/signing/keys/otakey.x509.pem))
