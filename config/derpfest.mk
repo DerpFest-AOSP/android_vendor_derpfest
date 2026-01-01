@@ -37,6 +37,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Extra packages
 PRODUCT_PACKAGES += \
+    DerpWalls \
     LMOSystemUIClock
 
 # Face Unlock
