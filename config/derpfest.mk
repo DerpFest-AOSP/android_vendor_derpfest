@@ -39,6 +39,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     BatteryStatsViewer \
     DerpWalls \
+    GameSpace \
     LMOSystemUIClock
 
 # ColumbusService
