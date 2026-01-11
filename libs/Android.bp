@@ -1,0 +1,12 @@
+android_library_import {
+    name: "custom-sdk_org.lsposed.hiddenapibypass_hiddenapibypass",
+    aars: ["org/lsposed/hiddenapibypass/hiddenapibypass/6.1/hiddenapibypass-6.1.aar"],
+    sdk_version: "36",
+    min_sdk_version: "36",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    static_libs: [
+    ],
+}
