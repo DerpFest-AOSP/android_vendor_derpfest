@@ -64,6 +64,7 @@ PRODUCT_PACKAGES += \
     LMOSystemUIClock \
     Miniature \
     Panic \
+    OmniStyle \
     Prospect \
     Ripple
 
