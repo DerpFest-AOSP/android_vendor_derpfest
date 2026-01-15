@@ -67,6 +67,7 @@ PRODUCT_PACKAGES += \
     LMOSystemUIClock \
     LyricFetchExt \
     Miniature \
+    OmniStyle \
     Prospect
 
 # ColumbusService
