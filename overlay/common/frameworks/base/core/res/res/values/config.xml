@@ -349,6 +349,11 @@
         <item>device_personalization_services/NotificationAssistant__importance_model_version=1</item>
         <item>device_personalization_services/NotificationAssistant__max_importance_variance=0.5</item>
 
+       <!-- Now Playing -->
+        <item>device_personalization_services/NowPlaying__enable_now_playing_lock_screen_update=true</item>
+        <item>device_personalization_services/NowPlaying__enable_now_playing_quick_affordance=true</item>
+        <item>device_personalization_services/NowPlaying__enable_now_playing_quick_settings=true</item>
+
         <!-- Now Playing (Pixel 2017) -->
         <item>device_personalization_services/NowPlaying__ambient_music_apk_music_detector_min_score=0.45</item>
         <item>device_personalization_services/NowPlaying__ambient_music_download_album_art_via_astrea=false</item>
