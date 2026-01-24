@@ -90,6 +90,16 @@
     <!-- Whether or not we should show the option to show battery percentage -->
     <bool name="config_battery_percentage_setting_available">false</bool>
 
+    <!-- The component name for the default system attention service.
+         This service must be trusted, as it can be activated without explicit consent of the user.
+         See android.attention.AttentionManagerService.
+    -->
+    <string name="config_defaultAttentionService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.attention.service.AiAiAttentionService</string>
+    <!-- Live Captions -->
+    <string name="config_defaultSystemCaptionsManagerService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService</string>
+    <!-- Launcher app suggestions -->
+    <string name="config_defaultAppPredictionService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService</string>
+
     <!-- List of packages that can use the Conversation space for their category messages
     notifications until they target R -->
     <string-array name="config_notificationMsgPkgsAllowedAsConvos" translatable="false">
@@ -330,6 +340,8 @@
         <!-- Notification Assistant (DPS) -->
         <item>notification_assistant/generate_actions=true</item>
         <item>notification_assistant/generate_replies=true</item>
+        <item>device_personalization_services/Notification__enable_otp_check_for_default_sms_package=true</item>
+        <item>device_personalization_services/Notification__enable_otp_in_smart_suggestion=true</item>
         <item>device_personalization_services/NotificationAssistant__enable_service=true</item>
         <item>device_personalization_services/NotificationAssistant__enable_upgrade_importance=true</item>
         <item>device_personalization_services/NotificationAssistant__importance_model_download_url=https://www.gstatic.com/android/notifications/importance/v1/manifest.json</item>
