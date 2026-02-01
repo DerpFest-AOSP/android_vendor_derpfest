@@ -63,7 +63,6 @@ PRODUCT_PACKAGES += \
     GameSpace \
     LMOFreeform \
     LMOFreeformSidebar \
-    LMOSystemUIClock \
     Miniature \
     Panic \
     OmniStyle \
