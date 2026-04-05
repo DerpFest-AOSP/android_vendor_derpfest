@@ -58,6 +58,7 @@ endif
 
 # Extra packages
 PRODUCT_PACKAGES += \
+    AxThemeStore \
     BatteryStatsViewer \
     DerpWalls \
     FossifyGallery \
