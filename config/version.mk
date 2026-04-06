@@ -13,9 +13,9 @@ endif
 # Build variant
 DERPFEST_BETA ?= true
 ifeq ($(DERPFEST_BETA),false)
-    DERPFEST_BUILD_VARIANT = Beta
+    DERPFEST_BUILD_VARIANT = Stable
 else
-    DERPFEST_BUILD_VARIANT = Beta
+    DERPFEST_BUILD_VARIANT = Stable
 endif
 
 # Internal version
