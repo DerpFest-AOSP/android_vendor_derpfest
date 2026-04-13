@@ -113,4 +113,5 @@ endif
 
 PRODUCT_PACKAGES += \
     AxSandbox \
-    AppLocker
+    AppLocker \
+    AxThemePicker
