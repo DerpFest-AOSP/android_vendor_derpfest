@@ -109,3 +109,8 @@ ifneq (,$(wildcard vendor/lineage/signing/keys/otakey.x509.pem))
 PRODUCT_OTA_PUBLIC_KEYS := vendor/lineage/signing/keys/otakey.x509.pem
 endif
 endif
+
+
+PRODUCT_PACKAGES += \
+    AxSandbox \
+    AppLocker
