@@ -284,6 +284,7 @@ endif
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     CarSystemUI \
+    GameSpace \
     Launcher3QuickStep \
     Settings \
     SystemUI
