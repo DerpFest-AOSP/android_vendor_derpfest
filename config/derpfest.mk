@@ -31,3 +31,22 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 # StorageManager configuration
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.storage_manager.show_opt_in=false
+
+
+# Don't dexpreopt prebuilts. (For GMS).
+DONT_DEXPREOPT_PREBUILTS := true
+
+# Include GMS by default
+WITH_GMS := true
+
+# Pixel Clocks
+$(call inherit-product, vendor/pixel/clocks/products/clocks.mk)
+
+# Pixel GMS
+$(call inherit-product, vendor/pixel/gms/products/gms.mk)
+
+# Pixel Sounds
+$(call inherit-product, vendor/pixel/sounds/products/sounds.mk)
+
+# Pixel ThemePicker
+$(call inherit-product, vendor/pixel/themepicker/products/themepicker.mk)
