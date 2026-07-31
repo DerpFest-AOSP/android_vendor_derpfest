@@ -65,6 +65,7 @@ PRODUCT_PACKAGES += \
     LMOFreeform \
     LMOFreeformSidebar \
     LMOSystemUIClock \
+    LyricFetchExt \
     Miniature \
     Prospect
 
