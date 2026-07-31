@@ -6,3 +6,4 @@ PRODUCT_COPY_FILES += \
 
 # Tablet-specific overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/lineage/overlay/tablet
+PRODUCT_PACKAGE_OVERLAYS += vendor/lineage/overlay/tablet-desktop

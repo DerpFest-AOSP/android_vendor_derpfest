@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	 SPDX-FileCopyrightText: PixelOS
+	 SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+	<string name="call_recording_starting_voice"></string>
+	<string name="call_recording_ending_voice"></string>
+</resources>
