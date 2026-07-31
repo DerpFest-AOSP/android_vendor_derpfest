@@ -1,0 +1,9 @@
+//
+// SPDX-FileCopyrightText: PixelOS
+// SPDX-License-Identifier: Apache-2.0
+//
+
+runtime_resource_overlay {
+    name: "GoogleDialerOverlayCustom",
+    product_specific: true,
+}
