@@ -21,6 +21,9 @@
             System
         -->
 
+        <!-- Enable the ML-based back-gesture classifier (SystemUIFundamental port) -->
+        <item>systemui/use_back_gesture_ml_model=true</item>
+
         <!-- Use new privacy indicators for location -->
         <item>privacy/location_indicators_enabled=true</item>
         <!-- Allow users to disable location indicators in Developer Options -->
