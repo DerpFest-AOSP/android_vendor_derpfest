@@ -102,6 +102,9 @@ DONT_DEXPREOPT_PREBUILTS := true
 # Include GMS by default
 WITH_GMS := true
 
+# DerpFest Clocks
+$(call inherit-product, packages/apps/DerpFestClocks/clocks.mk)
+
 # Pixel Clocks
 $(call inherit-product, vendor/pixel/clocks/products/clocks.mk)
 
