@@ -70,6 +70,11 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     Prospect
 
+# Google Pixel Weather
+PRODUCT_PACKAGES += \
+    WeatherPixelPrebuilt_10006113 \
+    default-permissions_pixelweather
+
 # ColumbusService
 ifneq ($(TARGET_SUPPORTS_QUICK_TAP),false)
 PRODUCT_PACKAGES += \
