@@ -138,7 +138,11 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 
 ifneq ($(TARGET_DISABLE_EPPE),true)
 # Require all requested packages to exist
-$(call enforce-product-packages-exist-internal,$(lastword $(_include_stack)),product_manifest.xml rild Calendar android.hidl.memory@1.0-impl.vendor vndk_apex_snapshot_package)
+# AOSP 17 product makefiles list two Google-internal modules that have no
+# open-source definition (base_system.mk: com.android.ranging behind
+# RELEASE_RANGING_STACK, base_vendor.mk: vendor_tracing_descriptors); AOSP
+# itself only warns about them.
+$(call enforce-product-packages-exist-internal,$(lastword $(_include_stack)),product_manifest.xml rild Calendar android.hidl.memory@1.0-impl.vendor vndk_apex_snapshot_package com.android.ranging vendor_tracing_descriptors)
 endif
 
 # Lineage interfaces
