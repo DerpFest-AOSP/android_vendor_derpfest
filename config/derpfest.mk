@@ -69,7 +69,8 @@ PRODUCT_PACKAGES += \
     LyricFetchExt \
     Miniature \
     OmniStyle \
-    Prospect
+    Prospect \
+    SystemUIFundamental
 
 # Google Pixel Weather
 PRODUCT_PACKAGES += \

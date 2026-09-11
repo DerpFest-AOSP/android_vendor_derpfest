@@ -283,7 +283,8 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     GameSpace \
     Launcher3QuickStep \
     Settings \
-    SystemUI
+    SystemUI \
+    SystemUIFundamental
 
 PRODUCT_PRODUCT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
