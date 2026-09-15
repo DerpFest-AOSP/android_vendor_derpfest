@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="com.google.android.as">
+        <permission name="com.google.android.ambientindication.permission.AMBIENT_INDICATION" />
+    </privapp-permissions>
+</permissions>

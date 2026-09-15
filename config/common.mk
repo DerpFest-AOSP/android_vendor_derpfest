@@ -169,6 +169,7 @@ PRODUCT_PACKAGES += \
 # Pixel compatibility resources
 PRODUCT_COPY_FILES += \
     vendor/lineage/config/permissions/privapp-permissions-lineagehw.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-lineagehw.xml \
+    vendor/lineage/config/permissions/privapp-permissions-ambientindication.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-ambientindication.xml \
     vendor/lineage/prebuilt/common/etc/sysconfig/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_2016_exclusive.xml
 
 PRODUCT_PACKAGE_OVERLAYS += \
