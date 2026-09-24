@@ -70,7 +70,6 @@ PRODUCT_PACKAGES += \
     LMOFreeform \
     LMOFreeformSidebar \
     LMOSystemUIClock \
-    LyricFetchExt \
     Miniature \
     OmniStyle \
     Prospect \
