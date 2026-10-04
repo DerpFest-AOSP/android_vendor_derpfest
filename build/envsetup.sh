@@ -673,7 +673,7 @@ function build_kernel() {
         default_branch="${product_version_major}.${product_version_minor}"
     fi
 
-    local kernel_manifest_branch="${KERNEL_MANIFEST_BRANCH:-lineage-23.2}"
+    local kernel_manifest_branch="${KERNEL_MANIFEST_BRANCH:-lineage-24.0}"
     local kernel_manifest_remote="${KERNEL_MANIFEST_REMOTE:-https://github.com/LineageOS/}"
     local kernel_manifest_url="${KERNEL_MANIFEST_URL:-}"
     local kernel_mirror="${DERPFEST_MIRROR:-${LINEAGE_MIRROR}}"
