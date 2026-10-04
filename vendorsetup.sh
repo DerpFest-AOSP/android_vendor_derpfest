@@ -33,6 +33,7 @@ if [ -z "${WELCOME_SHOWN}" ]; then
     echo -e "  - WITH_ADB_INSECURE - Disable ADB authentication"
     
     echo -e "\nFeature Flags:"
+    echo -e "  - DERP_BOOTANIMATION (default: none) - Include Monet, legacy, or no animation"
     echo -e "  - TARGET_INCLUDE_ACCORD (default: true) - Include Accord app"
     echo -e "  - TARGET_FACE_UNLOCK_SUPPORTED (default: TARGET_SUPPORTS_64_BIT_APPS) - Enable Face Unlock"
     echo -e "  - TARGET_SUPPORTS_QUICK_TAP (default: true) - Quick Tap gesture support"

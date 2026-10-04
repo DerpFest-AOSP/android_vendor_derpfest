@@ -136,6 +136,30 @@ SYSTEMUI_OPTIMIZE_JAVA ?= true
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
+# Boot animation.
+# DERP_BOOTANIMATION selects which animation is installed:
+#   none     nothing from this tree (the default)
+#   default  Monet light and dark animations
+#   legacy   the previous animation for both theme files
+# USE_LEGACY_BOOTANIMATION := true still selects legacy when
+# DERP_BOOTANIMATION is left unset. Set either variable in the device makefile.
+DERP_BOOTANIMATION := $(strip $(DERP_BOOTANIMATION))
+ifeq ($(DERP_BOOTANIMATION),)
+  ifneq ($(filter true,$(USE_LEGACY_BOOTANIMATION)),)
+    DERP_BOOTANIMATION := legacy
+  else
+    DERP_BOOTANIMATION := none
+  endif
+endif
+ifeq ($(filter default legacy none,$(DERP_BOOTANIMATION)),)
+  $(error DERP_BOOTANIMATION must be default, legacy, or none, not "$(DERP_BOOTANIMATION)")
+endif
+ifneq ($(DERP_BOOTANIMATION),none)
+PRODUCT_PACKAGES += \
+    derp_bootanimation \
+    derp_bootanimation_dark
+endif
+
 ifneq ($(TARGET_DISABLE_EPPE),true)
 # Require all requested packages to exist
 # AOSP 17 product makefiles list two Google-internal modules that have no
