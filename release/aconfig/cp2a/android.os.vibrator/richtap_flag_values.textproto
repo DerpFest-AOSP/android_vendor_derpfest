@@ -1,0 +1,6 @@
+flag_value {
+  package: "android.os.vibrator"
+  name: "richtap"
+  state: ENABLED
+  permission: READ_ONLY
+}
