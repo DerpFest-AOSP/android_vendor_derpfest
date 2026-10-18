@@ -67,6 +67,7 @@ endif
 $(call inherit-product-if-exists, packages/apps/AccessCard/config/accesscard.mk)
 
 PRODUCT_PACKAGES += \
+    ANGLE \
     AxThemeStore \
     BatteryStatsViewer \
     DerpWalls \
