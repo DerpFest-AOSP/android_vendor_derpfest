@@ -91,6 +91,8 @@ endif
 
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= $(TARGET_SUPPORTS_64_BIT_APPS)
+TARGET_PROVIDES_FACE_UNLOCK_HAL ?= false
+ifeq ($(TARGET_PROVIDES_FACE_UNLOCK_HAL),false)
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
     PRODUCT_PACKAGES += \
         ParanoidSense
@@ -101,6 +103,7 @@ ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
 else
     PRODUCT_PACKAGES += \
         SettingsGoogleFutureFaceEnroll
+endif
 endif
 
 # Don't dexpreopt prebuilts. (For GMS).
