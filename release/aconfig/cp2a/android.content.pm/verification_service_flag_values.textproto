@@ -1,0 +1,6 @@
+flag_value {
+  package: "android.content.pm"
+  name: "verification_service"
+  state: DISABLED
+  permission: READ_ONLY
+}
