@@ -2,16 +2,16 @@
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="CP2A.260805.005"
+readonly build_id="CP3A.261005.005"
 
 # Updated automatically via pixel/update-device-vars.sh
 
-readonly build_number="15828068"
+readonly build_number="16271449"
 
-readonly image_url="https://dl.google.com/dl/android/aosp/akita-cp2a.260805.005-factory-b143bf41.zip"
-readonly image_sha256="b143bf4128968df345dfb8ae51d09598084249606ae222a7bfd7c2c54f8c1a0c"
+readonly image_url="https://dl.google.com/dl/android/aosp/akita-cp3a.261005.005-factory-416a76b2.zip"
+readonly image_sha256="416a76b21c3cd64a3dab697af0abc21125f8a714d227c36e9a2035f88844352f"
 
-readonly flash_url="https://flash.android.com/build/15828068?target=akita-user&signed"
+readonly flash_url="https://flash.android.com/build/16271449?target=akita-user&signed"
 
-readonly ota_url="https://dl.google.com/dl/android/aosp/akita-ota-cp2a.260805.005-ab63aad4.zip"
-readonly ota_sha256="ab63aad45010554a906c458dcf27e1b9ad554f0eb1621472101d57422408b21e"
+readonly ota_url="https://dl.google.com/dl/android/aosp/akita-ota-cp3a.261005.005-daff3679.zip"
+readonly ota_sha256="daff36793ff748560409dffd99700848c780125b1226c94a93dc8a37d670418e"

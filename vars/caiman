@@ -2,16 +2,16 @@
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="CP2A.260805.005"
+readonly build_id="CP3A.261005.005"
 
 # Updated automatically via pixel/update-device-vars.sh
 
-readonly build_number="15828068"
+readonly build_number="16271449"
 
-readonly image_url="https://dl.google.com/dl/android/aosp/caiman-cp2a.260805.005-factory-f9bb5a68.zip"
-readonly image_sha256="f9bb5a6871b70f9ef5b217401bb8feb817b2d3c743efba1d29f4f3e9a8ab06f6"
+readonly image_url="https://dl.google.com/dl/android/aosp/caiman-cp3a.261005.005-factory-6c37847c.zip"
+readonly image_sha256="6c37847c9db3601e1228b48a08e7124af24f0fe936a36c2eada98c28abfe144c"
 
-readonly flash_url="https://flash.android.com/build/15828068?target=caiman-user&signed"
+readonly flash_url="https://flash.android.com/build/16271449?target=caiman-user&signed"
 
-readonly ota_url="https://dl.google.com/dl/android/aosp/caiman-ota-cp2a.260805.005-df29d8ee.zip"
-readonly ota_sha256="df29d8ee83efce0eae66510463bdd2cb4befd4b21df515bdc321c736f38d92fd"
+readonly ota_url="https://dl.google.com/dl/android/aosp/caiman-ota-cp3a.261005.005-9eef9468.zip"
+readonly ota_sha256="9eef946868ce133a507e6c626299923db7561f016aa34bca6c212623bb2d0e79"
