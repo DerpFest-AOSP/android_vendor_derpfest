@@ -138,7 +138,7 @@
         <item>device_personalization_services/Translate__interpreter_target_languages=de,en,ja,es,fr,it</item>
         <item>device_personalization_services/Translate__replace_auto_translate_copied_text_enabled=false</item>
         <item>device_personalization_services/Translate__text_to_text_language_list=vi,ja,fa,ro,nl,mr,mt,ar,ms,it,eo,is,et,es,iw,zh,uk,af,id,ur,mk,cy,hi,el,be,pt,lt,hr,lv,hu,ht,te,de,bg,th,bn,tl,pl,tr,kn,sv,gl,ko,sw,cs,da,ta,gu,ka,sl,ca,sk,ga,sq,no,fi,ru,fr,en,zh_Hant,fil</item>
-        <item>device_personalization_services/Translate__translation_service_enabled=false</item>
+        <item>device_personalization_services/Translate__translation_service_enabled=true</item>
         <item>device_personalization_services/Translate__translator_expiration_enabled=false</item>
         <item>device_personalization_services/Translate__use_translate_kit_streaming_api=true</item>
 
