@@ -64,6 +64,8 @@ PRODUCT_PACKAGES += LMODroidEdgeCutout
 endif
 
 # Extra packages
+$(call inherit-product-if-exists, packages/apps/AccessCard/config/accesscard.mk)
+
 PRODUCT_PACKAGES += \
     AxThemeStore \
     BatteryStatsViewer \
