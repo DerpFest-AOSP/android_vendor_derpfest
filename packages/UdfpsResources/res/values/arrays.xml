@@ -116,5 +116,44 @@
    	    <item>GI_Bennett</item>
    	    <item>GI_Sucrose</item>
    	    <item>GI_Yoimiya</item>
+        <item>udfps_icon_redskul_1</item>
+        <item>udfps_icon_redskul_2</item>
+        <item>udfps_icon_redskul_3</item>
+        <item>udfps_icon_redskul_4</item>
+        <item>udfps_icon_redskul_5</item>
+        <item>udfps_icon_redskul_6</item>
+        <item>udfps_icon_redskul_7</item>
+        <item>udfps_icon_redskul_8</item>
+        <item>udfps_icon_redskul_9</item>
+        <item>udfps_icon_redskul_10</item>
+        <item>udfps_icon_redskul_11</item>
+        <item>udfps_icon_redskul_12</item>
+        <item>udfps_icon_redskul_13</item>
+        <item>udfps_icon_redskul_14</item>
+        <item>udfps_icon_redskul_15</item>
+        <item>udfps_icon_redskul_16</item>
+        <item>udfps_icon_redskul_17</item>
+        <item>udfps_icon_redskul_18</item>
+        <item>udfps_icon_redskul_19</item>
+        <item>udfps_icon_redskul_20</item>
+        <item>udfps_icon_redskul_21</item>
+        <item>udfps_icon_redskul_22</item>
+        <item>udfps_icon_redskul_23</item>
+        <item>udfps_icon_redskul_24</item>
+        <item>udfps_icon_redskul_25</item>
+        <item>udfps_icon_redskul_26</item>
+        <item>udfps_icon_redskul_27</item>
+        <item>udfps_icon_redskul_28</item>
+        <item>udfps_icon_redskul_29</item>
+        <item>udfps_icon_redskul_30</item>
+        <item>udfps_icon_redskul_31</item>
+        <item>udfps_icon_glow_circle</item>
+        <item>udfps_icon_neon_circle_pink</item>
+        <item>udfps_icon_paint_splash_circle</item>
+        <item>udfps_icon_unfunnyguy_1</item>
+        <item>udfps_icon_unfunnyguy_2</item>
+        <item>udfps_icon_unfunnyguy_3</item>
+        <item>udfps_icon_unfunnyguy_4</item>
+        <item>udfps_icon_shouganai</item>
    </string-array>
 </resources>
