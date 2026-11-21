@@ -177,6 +177,7 @@ PRODUCT_PACKAGES += \
 endif
 
 PRODUCT_PACKAGES += \
+    Changelog \
     DerpFest-SettingsProvider \
     Updater
 
