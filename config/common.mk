@@ -350,6 +350,16 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/crowdin/overlay
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/lineage/build/target/product/security/lineage
 
+# On-device notification summaries (arm64 only)
+TARGET_SUPPORTS_NOTIFICATION_SUMMARIES ?= false
+ifeq ($(TARGET_SUPPORTS_NOTIFICATION_SUMMARIES),true)
+PRODUCT_PACKAGES += \
+    DerpSummarizer
+
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/lineage/overlay/notification-summaries
+endif
+
 include vendor/lineage/config/version.mk
 
 -include vendor/lineage-priv/keys/keys.mk
