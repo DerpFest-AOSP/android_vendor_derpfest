@@ -353,11 +353,12 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 # On-device notification summaries (arm64 only)
 TARGET_SUPPORTS_NOTIFICATION_SUMMARIES ?= false
 ifeq ($(TARGET_SUPPORTS_NOTIFICATION_SUMMARIES),true)
+ifneq ($(TARGET_SUPPORTS_64_BIT_APPS),true)
+$(error DerpSummarizer requires TARGET_SUPPORTS_64_BIT_APPS)
+endif
 PRODUCT_PACKAGES += \
-    DerpSummarizer
-
-PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/lineage/overlay/notification-summaries
+    DerpSummarizer \
+    DerpNotificationAssistantOverlay
 endif
 
 include vendor/lineage/config/version.mk

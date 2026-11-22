@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: DerpFest AOSP
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.derpfest.overlay.notificationsummaries">
+
+    <!--
+        Same partition as the GMS framework overlays. Priority 10 is above
+        PixelConfigOverlay2021_GMS (8). PixelConfigOverlayCommon_GMS is the one
+        that points config_defaultAssistantAccessComponent at Android System
+        Intelligence, and it is priority 1.
+    -->
+    <overlay
+        android:isStatic="true"
+        android:priority="10"
+        android:targetPackage="android" />
+</manifest>
